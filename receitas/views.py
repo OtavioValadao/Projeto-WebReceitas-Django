@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, get_list_or_404
 from .models import Receita
 
-def index (request):
+def index (request): #cria as def para aparecer na pagina
     receita = Receita.objects.order_by('-data_receita').filter(publicada=True)
 
     dados = {
